@@ -21,7 +21,7 @@ class Fav extends React.Component{
 
 
   componentDidMount = async()=>{
-    const url ='http://localhost:3011'
+    const url ='https://studyingfor.herokuapp.com'
     let getUrl = await axios.get(`${url}/getFav`)  // هدول من الباك ايند اللي عملنالهم بوست 
     // console.log(getUrl.data)
     this.setState({
@@ -32,7 +32,7 @@ class Fav extends React.Component{
 }
 
 deleteFunc = async(id) =>{
-  const url ='http://localhost:3011'
+  const url ='https://studyingfor.herokuapp.com'
   let newarr = await axios.delete(`${url}/deleteFav?id=${id}`) // هون بعملو باس لبارميتر 
   // console.log(getUrl.data)
   this.setState({

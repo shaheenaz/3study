@@ -15,7 +15,7 @@ class Home extends React.Component{
         
     }
     componentDidMount = async()=>{
-        const url ='http://localhost:3011'
+        const url ='https://studyingfor.herokuapp.com'
         let getUrl = await axios.get(`${url}/all`)
         console.log(getUrl.data)
         this.setState({
@@ -27,7 +27,7 @@ class Home extends React.Component{
 
 
     addFav = async(inx) =>{
-        const Url = 'http://localhost:3011'
+        const Url = 'https://studyingfor.herokuapp.com'
         const obj = {
             name : this.state.info[inx].name,
             url : this.state.info[inx].url
